@@ -1,31 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="auto">
+<html
+  lang="en"
+  data-bs-theme="auto"
+>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="Jan Suhrheinrich" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content=""
+    />
+    <meta
+      name="author"
+      content="Jan Suhrheinrich"
+    />
     <title>Restaurant Rhodos</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="favicon.ico"
+      type="image/x-icon"
+    />
     <script src="color-modes.js"></script>
-    <link href="bootstrap.min.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <link href="style.css" rel="stylesheet" />
+    <link
+      href="bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="theme-color"
+      content="#712cf9"
+    />
+    <link
+      href="style.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="d-none"
+    >
+      <symbol
+        id="check2"
+        viewBox="0 0 16 16"
+      >
         <path
           d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
         ></path>
       </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path
-          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
-        ></path>
+      <symbol
+        id="circle-half"
+        viewBox="0 0 16 16"
+      >
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
       </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <symbol
+        id="moon-stars-fill"
+        viewBox="0 0 16 16"
+      >
         <path
           d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
         ></path>
@@ -33,15 +68,16 @@
           d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
         ></path>
       </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
+      <symbol
+        id="sun-fill"
+        viewBox="0 0 16 16"
+      >
         <path
           d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
         ></path>
       </symbol>
     </svg>
-    <div
-      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
-    >
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
       <button
         class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
         id="bd-theme"
@@ -50,10 +86,17 @@
         data-bs-toggle="dropdown"
         aria-label="Toggle theme (auto)"
       >
-        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+        <svg
+          class="bi my-1 theme-icon-active"
+          aria-hidden="true"
+        >
           <use href="#circle-half"></use>
         </svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        <span
+          class="visually-hidden"
+          id="bd-theme-text"
+          >Toggle theme</span
+        >
       </button>
       <ul
         class="dropdown-menu dropdown-menu-end shadow"
@@ -66,11 +109,17 @@
             data-bs-theme-value="light"
             aria-pressed="false"
           >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
+            <svg
+              class="bi me-2 opacity-50"
+              aria-hidden="true"
+            >
               <use href="#sun-fill"></use>
             </svg>
             Light
-            <svg class="bi ms-auto d-none" aria-hidden="true">
+            <svg
+              class="bi ms-auto d-none"
+              aria-hidden="true"
+            >
               <use href="#check2"></use>
             </svg>
           </button>
@@ -82,11 +131,17 @@
             data-bs-theme-value="dark"
             aria-pressed="false"
           >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
+            <svg
+              class="bi me-2 opacity-50"
+              aria-hidden="true"
+            >
               <use href="#moon-stars-fill"></use>
             </svg>
             Dark
-            <svg class="bi ms-auto d-none" aria-hidden="true">
+            <svg
+              class="bi ms-auto d-none"
+              aria-hidden="true"
+            >
               <use href="#check2"></use>
             </svg>
           </button>
@@ -98,11 +153,17 @@
             data-bs-theme-value="auto"
             aria-pressed="true"
           >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
+            <svg
+              class="bi me-2 opacity-50"
+              aria-hidden="true"
+            >
               <use href="#circle-half"></use>
             </svg>
             Auto
-            <svg class="bi ms-auto d-none" aria-hidden="true">
+            <svg
+              class="bi ms-auto d-none"
+              aria-hidden="true"
+            >
               <use href="#check2"></use>
             </svg>
           </button>
@@ -110,11 +171,12 @@
       </ul>
     </div>
 
-    <nav
-      class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom"
-    >
+    <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom">
       <div class="container">
-        <a class="navbar-brand d-md-none ms-4" href="index.html">
+        <a
+          class="navbar-brand d-md-none ms-4"
+          href="index.html"
+        >
           Restaurant Rhodos
         </a>
         <button
@@ -134,7 +196,10 @@
           aria-labelledby="offcanvasLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasLabel">
+            <h5
+              class="offcanvas-title"
+              id="offcanvasLabel"
+            >
               Restaurant Rhodos
             </h5>
             <button
@@ -147,13 +212,25 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow-1 justify-content-center">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a
+                  class="nav-link"
+                  href="index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="speisekarte.html">Speisekarte</a>
+                <a
+                  class="nav-link"
+                  href="speisekarte.html"
+                  >Speisekarte</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="impressum.html">Impressum</a>
+                <a
+                  class="nav-link"
+                  href="impressum.html"
+                  >Impressum</a
+                >
               </li>
             </ul>
           </div>
@@ -165,8 +242,7 @@
       <div class="container my-5">
         <h1>Unsere Speisekarte</h1>
         <p>
-          Hier finden Sie eine Übersicht unserer köstlichen Gerichte. Wir legen
-          viel Wert auf frische Zutaten und authentische Rezepte. Überzeugen Sie
+          Hier finden Sie eine Übersicht unserer köstlichen Gerichte. Wir legen viel Wert auf frische Zutaten und authentische Rezepte. Überzeugen Sie
           sich selbst und lassen Sie sich von unseren Spezialitäten verwöhnen!
         </p>
         <img
@@ -175,7 +251,10 @@
           alt="Gemüse"
         />
 
-        <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div
+          class="accordion"
+          id="accordionPanelsStayOpenExample"
+        >
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
@@ -197,9 +276,7 @@
                 <div class="list-group">
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>01.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <h6 class="mb-0">Gulaschsuppe</h6>
                       <small class="opacity-50 text-nowrap">4,00€</small>
                     </div>
@@ -207,9 +284,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>02.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Hühnersuppe</h6>
                         <p class="mb-0 opacity-75">mit Einlage</p>
@@ -220,9 +295,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>03.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Tomatencremesuppe</h6>
                         <p class="mb-0 opacity-75">mit Sahne</p>
@@ -233,9 +306,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>04.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Zwiebelsuppe</h6>
                         <p class="mb-0 opacity-75">mit Parmesankäse</p>
@@ -269,9 +340,7 @@
                 <div class="list-group">
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>05.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Sachanaki frittiert</h6>
                         <p class="mb-0 opacity-75">panierter Käse</p>
@@ -281,15 +350,11 @@
                   </div>
 
                   <div class="list-group-item d-flex gap-3 py-3">
-                    <div>05.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div>05a.</div>
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Sachanaki gegrillt</h6>
-                        <p class="mb-0 opacity-75">
-                          panierter Käse im Pfännchen gegrillt
-                        </p>
+                        <p class="mb-0 opacity-75">panierter Käse im Pfännchen gegrillt</p>
                       </div>
                       <small class="opacity-50 text-nowrap">8,00€</small>
                     </div>
@@ -297,22 +362,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>06.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
-                      <div>
-                        <h6 class="mb-0">Tsatsiki</h6>
-                        <p class="mb-0 opacity-75">Quarkspeise mit Knoblauch</p>
-                      </div>
-                      <small class="opacity-50 text-nowrap">4,50€</small>
-                    </div>
-                  </div>
-
-                  <div class="list-group-item d-flex gap-3 py-3">
-                    <div>06.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Tsatsiki</h6>
                         <p class="mb-0 opacity-75">Quarkspeise mit Knoblauch</p>
@@ -323,14 +373,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>07.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Dolmadakia</h6>
-                        <p class="mb-0 opacity-75">
-                          Weinblätter gefüllt mit Reis
-                        </p>
+                        <p class="mb-0 opacity-75">Weinblätter gefüllt mit Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">5,00 €</small>
                     </div>
@@ -338,9 +384,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>08.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Dolmadakia mit Tsatsiki</h6>
                         <p class="mb-0 opacity-75"></p>
@@ -351,14 +395,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>09.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Feta</h6>
-                        <p class="mb-0 opacity-75">
-                          Schafskäse mit Öl und Zwiebeln
-                        </p>
+                        <p class="mb-0 opacity-75">Schafskäse mit Öl und Zwiebeln</p>
                       </div>
                       <small class="opacity-50 text-nowrap">5,50 €</small>
                     </div>
@@ -366,14 +406,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>10.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gigantes</h6>
-                        <p class="mb-0 opacity-75">
-                          Extra dicke Bohnen mit Tomatensauce
-                        </p>
+                        <p class="mb-0 opacity-75">Extra dicke Bohnen mit Tomatensauce</p>
                       </div>
                       <small class="opacity-50 text-nowrap">4,50 €</small>
                     </div>
@@ -381,9 +417,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>11.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Oktapodi</h6>
                         <p class="mb-0 opacity-75">Oktopus, pikant gewürzt</p>
@@ -394,14 +428,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>12.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Melitzanosalata</h6>
-                        <p class="mb-0 opacity-75">
-                          Auberginensalat mit Knoblauch
-                        </p>
+                        <p class="mb-0 opacity-75">Auberginensalat mit Knoblauch</p>
                       </div>
                       <small class="opacity-50 text-nowrap">7,00 €</small>
                     </div>
@@ -409,9 +439,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>13.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Taramossalata</h6>
                         <p class="mb-0 opacity-75">Fischrogensalat</p>
@@ -422,9 +450,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>14.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <h6 class="mb-0">schwarze Oliven</h6>
                       <small class="opacity-50 text-nowrap">4,00 €</small>
                     </div>
@@ -432,9 +458,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>15.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <h6 class="mb-0">Peperoni</h6>
                       <small class="opacity-50 text-nowrap">3,50 €</small>
                     </div>
@@ -442,9 +466,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>16.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Omelett</h6>
                         <p class="mb-0 opacity-75">mit Schafskäse</p>
@@ -455,9 +477,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>17.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Omelett</h6>
                         <p class="mb-0 opacity-75">mit Pilzen</p>
@@ -468,9 +488,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>18.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gefüllte Paprika</h6>
                         <p class="mb-0 opacity-75">mit Schafskäse und Sauce</p>
@@ -481,9 +499,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>19.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Pikilia</h6>
                         <p class="mb-0 opacity-75">Griechische Vorspeise</p>
@@ -494,14 +510,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>20.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Pikilia ( für 2 Personen )</h6>
-                        <p class="mb-0 opacity-75">
-                          Griechische Vorspeisenplatte
-                        </p>
+                        <p class="mb-0 opacity-75">Griechische Vorspeisenplatte</p>
                       </div>
                       <small class="opacity-50 text-nowrap">14,00 €</small>
                     </div>
@@ -509,14 +521,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>21.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Triopitakia</h6>
-                        <p class="mb-0 opacity-75">
-                          Blätterteig gefüllt mit Käse
-                        </p>
+                        <p class="mb-0 opacity-75">Blätterteig gefüllt mit Käse</p>
                       </div>
                       <small class="opacity-50 text-nowrap">6,00 €</small>
                     </div>
@@ -524,14 +532,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>93.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Eingelegte Rote Paprika</h6>
-                        <p class="mb-0 opacity-75">
-                          aus Florina, mit Knoblauch
-                        </p>
+                        <p class="mb-0 opacity-75">aus Florina, mit Knoblauch</p>
                       </div>
                       <small class="opacity-50 text-nowrap">5,50 €</small>
                     </div>
@@ -539,9 +543,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>94.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gegrillte Peperoni</h6>
                         <p class="mb-0 opacity-75">Mit Knoblauchsauce</p>
@@ -575,15 +577,10 @@
                 <div class="list-group">
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>22.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Bauernsalat</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Tomaten, Gurken, Oliven, Peperoni, Schafskäse und
-                          Zwiebeln
-                        </p>
+                        <p class="mb-0 opacity-75">mit Tomaten, Gurken, Oliven, Peperoni, Schafskäse und Zwiebeln</p>
                       </div>
                       <small class="opacity-50 text-nowrap">11,00€</small>
                     </div>
@@ -591,15 +588,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>23.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Thunfischsalat</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Thunfisch, grünem Salat, Tomaten, Gurken,
-                          Zwiebeln, Oliven, Peperoni
-                        </p>
+                        <p class="mb-0 opacity-75">mit Thunfisch, grünem Salat, Tomaten, Gurken, Zwiebeln, Oliven, Peperoni</p>
                       </div>
                       <small class="opacity-50 text-nowrap">11,00€</small>
                     </div>
@@ -607,9 +599,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>24.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <h6 class="mb-0">Tomatensalat</h6>
                       <small class="opacity-50 text-nowrap">4,00€</small>
                     </div>
@@ -617,9 +607,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>23.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Weißkohlsalat</h6>
                         <p class="mb-0 opacity-75">mit Schafskäse</p>
@@ -630,15 +618,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>23.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Rhodossalat</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Oktopus, grünem Salat, Weißkohl, Tsasiki, Tomaten,
-                          Gurken, Oliven, Schafskäse und Zwiebeln
-                        </p>
+                        <p class="mb-0 opacity-75">mit Oktopus, grünem Salat, Weißkohl, Tsasiki, Tomaten, Gurken, Oliven, Schafskäse und Zwiebeln</p>
                       </div>
                       <small class="opacity-50 text-nowrap">11,00€</small>
                     </div>
@@ -646,15 +629,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>23.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Lindossalat</h6>
-                        <p class="mb-0 opacity-75">
-                          Grüner Salat mit Tomaten, Gurken, Ei, Schafskäse,
-                          Zwiebeln, Oliven, Peperoni und Sahne Dressing
-                        </p>
+                        <p class="mb-0 opacity-75">Grüner Salat mit Tomaten, Gurken, Ei, Schafskäse, Zwiebeln, Oliven, Peperoni und Sahne Dressing</p>
                       </div>
                       <small class="opacity-50 text-nowrap">11,00€</small>
                     </div>
@@ -685,9 +663,7 @@
                 <div class="list-group">
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>28.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Sardinen</h6>
                         <p class="mb-0 opacity-75">mit Pommes und Salat</p>
@@ -698,9 +674,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>29.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Kalamares</h6>
                         <p class="mb-0 opacity-75">
@@ -714,14 +688,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>29a.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Schwertfisch</h6>
-                        <p class="mb-0 opacity-75">
-                          vom Grill, mit grünem Salat, und Kartoffelscheiben
-                        </p>
+                        <p class="mb-0 opacity-75">vom Grill, mit grünem Salat, und Kartoffelscheiben</p>
                       </div>
                       <small class="opacity-50 text-nowrap">21,00€</small>
                     </div>
@@ -729,9 +699,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>30.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Garides</h6>
                         <p class="mb-0 opacity-75">
@@ -745,14 +713,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>31.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Kalamares und 2 Garides</h6>
-                        <p class="mb-0 opacity-75">
-                          mit grünem Salat, Tsatsiki und Pommes Frites
-                        </p>
+                        <p class="mb-0 opacity-75">mit grünem Salat, Tsatsiki und Pommes Frites</p>
                       </div>
                       <small class="opacity-50 text-nowrap">16,50€</small>
                     </div>
@@ -760,14 +724,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>32.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Seezunge</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Bratkartoffeln und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Bratkartoffeln und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">Tagespreis</small>
                     </div>
@@ -775,14 +735,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>33.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">gegrillte Kalamares</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Salat, Tsatsiki und Pommes Frites
-                        </p>
+                        <p class="mb-0 opacity-75">mit Salat, Tsatsiki und Pommes Frites</p>
                       </div>
                       <small class="opacity-50 text-nowrap">16,50€</small>
                     </div>
@@ -790,9 +746,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>33.a</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Fischplatte ( für 2 Personen )</h6>
                         <p class="mb-0 opacity-75">
@@ -826,25 +780,15 @@
               class="accordion-collapse collapse"
             >
               <div class="accordion-body">
-                <p class="mb-0">
-                  Die nachstehenden Speisen werden mit Pommes Frites oder Reis
-                  und Salat serviert.
-                </p>
-                <p class="mb-4">
-                  Wenn Sie keine besonderen Wünsche äußern, wird ihr Steak
-                  MEDIUM gegrillt!
-                </p>
+                <p class="mb-0">Die nachstehenden Speisen werden mit Pommes Frites oder Reis und Salat serviert.</p>
+                <p class="mb-4">Wenn Sie keine besonderen Wünsche äußern, wird ihr Steak MEDIUM gegrillt!</p>
                 <div class="list-group">
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>34.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gyros</h6>
-                        <p class="mb-0 opacity-75">
-                          fein geschnittenes Fleisch vom Drehspieß
-                        </p>
+                        <p class="mb-0 opacity-75">fein geschnittenes Fleisch vom Drehspieß</p>
                       </div>
                       <small class="opacity-50 text-nowrap">13,00€</small>
                     </div>
@@ -852,9 +796,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>35.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gyros</h6>
                         <p class="mb-0 opacity-75">mit Tsatsiki</p>
@@ -865,9 +807,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>36.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Souvlakia</h6>
                         <p class="mb-0 opacity-75">2 Fleischspieße</p>
@@ -878,14 +818,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>37.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Bauernsouvlakia</h6>
-                        <p class="mb-0 opacity-75">
-                          2 Fleischspieße mit Zwiebeln und Paprika
-                        </p>
+                        <p class="mb-0 opacity-75">2 Fleischspieße mit Zwiebeln und Paprika</p>
                       </div>
                       <small class="opacity-50 text-nowrap">15,00 €</small>
                     </div>
@@ -893,9 +829,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>38.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Biftekia</h6>
                         <p class="mb-0 opacity-75"></p>
@@ -906,14 +840,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>39.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Biftekia</h6>
-                        <p class="mb-0 opacity-75">
-                          überbacken mit Metaxa, mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">überbacken mit Metaxa, mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">14,50 €</small>
                     </div>
@@ -921,14 +851,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>40.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">2 gefüllte Biftekia</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Schafskäse und Gyros, Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Schafskäse und Gyros, Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">14,00 €</small>
                     </div>
@@ -936,14 +862,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>41.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gefülltes Hacksteak</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Schafskäse und Knoblauch
-                        </p>
+                        <p class="mb-0 opacity-75">mit Schafskäse und Knoblauch</p>
                       </div>
                       <small class="opacity-50 text-nowrap">14,00 €</small>
                     </div>
@@ -951,9 +873,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>42.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Schweinefilet Faliraki</h6>
                         <p class="mb-0 opacity-75">gefüllt mit Käse</p>
@@ -964,9 +884,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>43.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Schweinefilet</h6>
                         <p class="mb-0 opacity-75">mit gebratenen Zwiebeln</p>
@@ -977,9 +895,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>44.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Schweinefilet</h6>
                         <p class="mb-0 opacity-75">mit pikanter Pfeffersauce</p>
@@ -990,9 +906,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>45.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Rinderleber</h6>
                         <p class="mb-0 opacity-75">mit gebratenen Zwiebeln</p>
@@ -1003,9 +917,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>46.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Plakateller</h6>
                         <p class="mb-0 opacity-75">1 Souvlaki und Gyros</p>
@@ -1016,14 +928,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>47.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Mantrakiteller</h6>
-                        <p class="mb-0 opacity-75">
-                          2 Biftekia und 1 Bauernsouvlaki
-                        </p>
+                        <p class="mb-0 opacity-75">2 Biftekia und 1 Bauernsouvlaki</p>
                       </div>
                       <small class="opacity-50 text-nowrap">14,00 €</small>
                     </div>
@@ -1031,9 +939,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>48.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Artemis Teller</h6>
                         <p class="mb-0 opacity-75">2 Lammkoteletts und Gyros</p>
@@ -1044,15 +950,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>49.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Grillteller</h6>
-                        <p class="mb-0 opacity-75">
-                          1 Souvlaki, Gyros, 1 Bifteki, 1 Lammkotelett, Salat,
-                          Pommes Frites und Reis
-                        </p>
+                        <p class="mb-0 opacity-75">1 Souvlaki, Gyros, 1 Bifteki, 1 Lammkotelett, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">17,00 €</small>
                     </div>
@@ -1060,15 +961,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>50.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Hermesteller</h6>
-                        <p class="mb-0 opacity-75">
-                          2 Schweinefilets, 2 Biftekia, 2 Lammkoteletts, Salat,
-                          Pommes Frites und Reis
-                        </p>
+                        <p class="mb-0 opacity-75">2 Schweinefilets, 2 Biftekia, 2 Lammkoteletts, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">17,00 €</small>
                     </div>
@@ -1076,15 +972,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>51.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Akropolisteller</h6>
-                        <p class="mb-0 opacity-75">
-                          2 Bauernsouvlaki, 1 Bifteki, Gyros, Salat, Pommes
-                          Frites und Reis
-                        </p>
+                        <p class="mb-0 opacity-75">2 Bauernsouvlaki, 1 Bifteki, Gyros, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">17,00 €</small>
                     </div>
@@ -1092,14 +983,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>52.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Meteorateller</h6>
-                        <p class="mb-0 opacity-75">
-                          Gyros, 2 Schweinefilets und gebratene Zwiebeln
-                        </p>
+                        <p class="mb-0 opacity-75">Gyros, 2 Schweinefilets und gebratene Zwiebeln</p>
                       </div>
                       <small class="opacity-50 text-nowrap">16,00 €</small>
                     </div>
@@ -1107,15 +994,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>53.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Mykonosteller</h6>
-                        <p class="mb-0 opacity-75">
-                          1 Schweinefilets, 2 Biftekia, 2 Rinderleber, Salat,
-                          Pommes Frites und Reis
-                        </p>
+                        <p class="mb-0 opacity-75">1 Schweinefilets, 2 Biftekia, 2 Rinderleber, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">17,00 €</small>
                     </div>
@@ -1123,15 +1005,11 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>55.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Rhodos Platte ( für 2 Personen )</h6>
                         <p class="mb-0 opacity-75">
-                          Vorspeise: Spezial Salatteller 2 Souvlakia, 2
-                          Biftekia, Gyros, 2 Schweinefilets, Pommes Frites und
-                          Reis
+                          Vorspeise: Spezial Salatteller 2 Souvlakia, 2 Biftekia, Gyros, 2 Schweinefilets, Pommes Frites und Reis
                         </p>
                       </div>
                       <small class="opacity-50 text-nowrap">36,00 €</small>
@@ -1140,16 +1018,12 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>57.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Moussaka</h6>
                         <p class="mb-0 opacity-75">
-                          fein abgestimmte Backofenzubereitung aus Auberginen,
-                          Hackfleisch, Kartoffelscheiben und Käse, sowie anderen
-                          Original Zubereitungen. Gekrönt mit sahniger Bechamel
-                          Creme und Salat
+                          fein abgestimmte Backofenzubereitung aus Auberginen, Hackfleisch, Kartoffelscheiben und Käse, sowie anderen Original
+                          Zubereitungen. Gekrönt mit sahniger Bechamel Creme und Salat
                         </p>
                       </div>
                       <small class="opacity-50 text-nowrap">13,00 €</small>
@@ -1158,14 +1032,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>58.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Paidakia</h6>
-                        <p class="mb-0 opacity-75">
-                          Lammkoteletts mit Salat und Pommes Frites oder Reis
-                        </p>
+                        <p class="mb-0 opacity-75">Lammkoteletts mit Salat und Pommes Frites oder Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">17,00 €</small>
                     </div>
@@ -1173,15 +1043,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>59.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Lammkeulensteak</h6>
-                        <p class="mb-0 opacity-75">
-                          mit gebratenen Zwiebeln, Käse, Salat und Pommes Frites
-                          oder Reis
-                        </p>
+                        <p class="mb-0 opacity-75">mit gebratenen Zwiebeln, Käse, Salat und Pommes Frites oder Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1189,15 +1054,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>60.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Lammplatte ( für 2 Personen )</h6>
-                        <p class="mb-0 opacity-75">
-                          1 Lammsteak, 8 Lammkoteletts, 2 Lammfilets, Reis,
-                          Pommes Frites und Bauernsalat
-                        </p>
+                        <p class="mb-0 opacity-75">1 Lammsteak, 8 Lammkoteletts, 2 Lammfilets, Reis, Pommes Frites und Bauernsalat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">40,00 €</small>
                     </div>
@@ -1205,14 +1065,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>61.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Arnaki Kokinisto</h6>
-                        <p class="mb-0 opacity-75">
-                          Lammfleisch mit Auberginen, Käse und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Lammfleisch mit Auberginen, Käse und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">15,00 €</small>
                     </div>
@@ -1220,14 +1076,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>62.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Arnaki Kokinisto</h6>
-                        <p class="mb-0 opacity-75">
-                          Lammfleisch mit Okrschotten, Käse und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Lammfleisch mit Okrschotten, Käse und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">15,00 €</small>
                     </div>
@@ -1235,14 +1087,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>63.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Arnaki Kokinisto</h6>
-                        <p class="mb-0 opacity-75">
-                          Lammfleisch mit grünen Bohnen und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Lammfleisch mit grünen Bohnen und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">15,00 €</small>
                     </div>
@@ -1250,15 +1098,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>64.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Arnaki Kokinisto</h6>
-                        <p class="mb-0 opacity-75">
-                          Lammfleisch mit Kritharaki (griechische Nudeln) und
-                          Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Lammfleisch mit Kritharaki (griechische Nudeln) und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">15,00 €</small>
                     </div>
@@ -1266,15 +1109,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>65.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Rumpsteak</h6>
-                        <p class="mb-0 opacity-75">
-                          mit gebratenen Zwiebeln, Pilzen, Salat, Pommes Frites
-                          und Reis
-                        </p>
+                        <p class="mb-0 opacity-75">mit gebratenen Zwiebeln, Pilzen, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1282,14 +1120,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>66.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Floridasteak</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Kräuterbutter, Salat, Pommes Frites und Reis
-                        </p>
+                        <p class="mb-0 opacity-75">mit Kräuterbutter, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1297,15 +1131,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>67.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Pfeffersteak</h6>
-                        <p class="mb-0 opacity-75">
-                          mit pikanter Pfeffersauce, Salat, Pommes Frites und
-                          Reis
-                        </p>
+                        <p class="mb-0 opacity-75">mit pikanter Pfeffersauce, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1313,15 +1142,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>68.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Knoblauchsteak</h6>
-                        <p class="mb-0 opacity-75">
-                          mit pikanter Knoblauchsauce, Salat, Pommes Frites und
-                          Reis
-                        </p>
+                        <p class="mb-0 opacity-75">mit pikanter Knoblauchsauce, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1329,14 +1153,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>69.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Rumpsteak</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Schafskäse, Salat, Pommes Frites und Reis
-                        </p>
+                        <p class="mb-0 opacity-75">mit Schafskäse, Salat, Pommes Frites und Reis</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1344,14 +1164,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>70.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Schweineschnitzel</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Metaxasauce, Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Metaxasauce, Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">12,00 €</small>
                     </div>
@@ -1359,15 +1175,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>72.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Riganato</h6>
-                        <p class="mb-0 opacity-75">
-                          Schweinefilet mit Oregano, pikant gewürzt, dazu Pommes
-                          Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Schweinefilet mit Oregano, pikant gewürzt, dazu Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">16,00 €</small>
                     </div>
@@ -1375,15 +1186,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>73.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Athospfanne</h6>
-                        <p class="mb-0 opacity-75">
-                          Riesenbohnen, Hackfleischbällchen in
-                          Tomatenkräutersauce mit Käse und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Riesenbohnen, Hackfleischbällchen in Tomatenkräutersauce mit Käse und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">11,00 €</small>
                     </div>
@@ -1391,14 +1197,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>74.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Jägerschnitzel</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">12,00 €</small>
                     </div>
@@ -1406,14 +1208,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>75.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Zigeunerschnitzel</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">12,00 €</small>
                     </div>
@@ -1421,14 +1219,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>76.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Schweineschnitzel</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">10,00 €</small>
                     </div>
@@ -1436,14 +1230,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>81.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gyros – Spezial</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Pilzen und feiner Sauce
-                        </p>
+                        <p class="mb-0 opacity-75">mit Pilzen und feiner Sauce</p>
                       </div>
                       <small class="opacity-50 text-nowrap">15,00 €</small>
                     </div>
@@ -1451,15 +1241,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>82.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Afandou Teller</h6>
-                        <p class="mb-0 opacity-75">
-                          2 Lammkoteletts, 2 Lammfilets, mit Pommes Frites, Reis
-                          und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">2 Lammkoteletts, 2 Lammfilets, mit Pommes Frites, Reis und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">15,00 €</small>
                     </div>
@@ -1467,14 +1252,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>83.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gyros überbacken</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Metaxasauce, Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Metaxasauce, Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">15,00 €</small>
                     </div>
@@ -1482,14 +1263,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>85.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Afrodititeller</h6>
-                        <p class="mb-0 opacity-75">
-                          Gyros, 2 Biftekia mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Gyros, 2 Biftekia mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">14,00 €</small>
                     </div>
@@ -1497,15 +1274,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>86.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Olympteller</h6>
-                        <p class="mb-0 opacity-75">
-                          Gyros, 1 Schweinefilet, 1 Bauernsouvlaki, 1 Bifteki
-                          mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Gyros, 1 Schweinefilet, 1 Bauernsouvlaki, 1 Bifteki mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">17,00 €</small>
                     </div>
@@ -1513,15 +1285,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>87.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Fitos Teller</h6>
-                        <p class="mb-0 opacity-75">
-                          2 Biftekia, 2 Schweinefilets, 1 Lammfilets, mit Pommes
-                          Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">2 Biftekia, 2 Schweinefilets, 1 Lammfilets, mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">17,00 €</small>
                     </div>
@@ -1529,14 +1296,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>88.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Lammfilet</h6>
-                        <p class="mb-0 opacity-75">
-                          mit gebratenen Zwiebeln, Pommes Frites, Reis und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit gebratenen Zwiebeln, Pommes Frites, Reis und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1544,15 +1307,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>89.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Lammfilet</h6>
-                        <p class="mb-0 opacity-75">
-                          mit pikanter Knoblauchsauce, Pommes Frites, Reis und
-                          Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit pikanter Knoblauchsauce, Pommes Frites, Reis und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1560,15 +1318,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>90.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Lammfilet</h6>
-                        <p class="mb-0 opacity-75">
-                          mit pikanter Pfeffersauce, Pommes Frites, Reis und
-                          Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit pikanter Pfeffersauce, Pommes Frites, Reis und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">22,00 €</small>
                     </div>
@@ -1576,14 +1329,10 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>91.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">gefülltes Hacksteak</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Goudakäse, Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Goudakäse, Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">14,00 €</small>
                     </div>
@@ -1591,9 +1340,7 @@
 
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>92.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gyros und 2 Rinderleber</h6>
                         <p class="mb-0 opacity-75">Pommes Frites und Salat</p>
@@ -1627,36 +1374,28 @@
                 <div class="list-group">
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div></div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <h6 class="mb-0">Pommes Frites</h6>
                       <small class="opacity-50 text-nowrap">2,50€</small>
                     </div>
                   </div>
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div></div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <h6 class="mb-0">Reis</h6>
                       <small class="opacity-50 text-nowrap">2,50€</small>
                     </div>
                   </div>
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div></div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <h6 class="mb-0">Griechische Nudeln</h6>
                       <small class="opacity-50 text-nowrap">3,00€</small>
                     </div>
                   </div>
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div></div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <h6 class="mb-0">grüne Bohnen</h6>
                       <small class="opacity-50 text-nowrap">3,00€</small>
                     </div>
@@ -1687,56 +1426,40 @@
                 <div class="list-group">
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>77.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Pinokio – Teller</h6>
-                        <p class="mb-0 opacity-75">
-                          Hackfleischröllchen mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">Hackfleischröllchen mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">9,00€</small>
                     </div>
                   </div>
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>78.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Souvlaki</h6>
-                        <p class="mb-0 opacity-75">
-                          1 Fleischspieß mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">1 Fleischspieß mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">9,00€</small>
                     </div>
                   </div>
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>79.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Gyros</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">9,00€</small>
                     </div>
                   </div>
                   <div class="list-group-item d-flex gap-3 py-3">
                     <div>80.</div>
-                    <div
-                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
-                    >
+                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
                       <div>
                         <h6 class="mb-0">Schweineschnitzel</h6>
-                        <p class="mb-0 opacity-75">
-                          mit Pommes Frites und Salat
-                        </p>
+                        <p class="mb-0 opacity-75">mit Pommes Frites und Salat</p>
                       </div>
                       <small class="opacity-50 text-nowrap">9,00€</small>
                     </div>
@@ -1749,6 +1472,9 @@
       </div>
     </main>
 
-    <script src="bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+    <script
+      src="bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
   </body>
 </html>
