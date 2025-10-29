@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Jan Suhrheinrich" />
+    <title>Restaurant Rhodos</title>
+
+    <script src="../color-modes.js"></script>
+    <link href="../bootstrap.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="product.css" rel="stylesheet" />
+    <style>
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+        ></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        ></path>
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        ></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        ></path>
+      </symbol>
+    </svg>
+    <div
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+    >
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom"
+    >
+      <div class="container">
+        <a class="navbar-brand d-md-none" href="#"> Restaurant Rhodos </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+          aria-controls="offcanvas"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvas"
+          aria-labelledby="offcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">
+              Restaurant Rhodos
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="speisekarte.html">Speisekarte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="impressum.html">Impressum</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container my-5">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                Suppen
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <div class="list-group">
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>01.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <h6 class="mb-0">Gulaschsuppe</h6>
+                      <small class="opacity-50 text-nowrap">4,00€</small>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>02.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Hühnersuppe</h6>
+                        <p class="mb-0 opacity-75">mit Einlage</p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">4,00€</small>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>03.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Tomatencremesuppe</h6>
+                        <p class="mb-0 opacity-75">mit Sahne</p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">4,00€</small>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>04.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Zwiebelsuppe</h6>
+                        <p class="mb-0 opacity-75">mit Parmesankäse</p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">4,00€</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                Vorspeisen
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <div class="list-group">
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>05.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <h6 class="mb-0">Sachanaki frittiert</h6>
+                      <small class="opacity-50 text-nowrap">6,50€</small>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>05.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <h6 class="mb-0">Sachanaki gegrillt</h6>
+                      <small class="opacity-50 text-nowrap">8,00€</small>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>06.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Tsatsiki</h6>
+                        <p class="mb-0 opacity-75">Quarkspeise mit Knoblauch</p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">4,50€</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                Salate
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <div class="list-group">
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>22.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Bauernsalat</h6>
+                        <p class="mb-0 opacity-75">
+                          mit Tomaten, Gurken, Oliven, Peperoni, Schafskäse und
+                          Zwiebeln
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">11,00€</small>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>23.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Thunfischsalat</h6>
+                        <p class="mb-0 opacity-75">
+                          Thunfisch, grüner Salat, Tomaten, Gurken, Zwiebeln,
+                          Oliven, Peperoni
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">11,00€</small>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>24.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <h6 class="mb-0">Tomatensalat</h6>
+                      <small class="opacity-50 text-nowrap">4,00€</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                Fischgerichte
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFour"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <div class="list-group">
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>28.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Sardinen</h6>
+                        <p class="mb-0 opacity-75">mit Pommes und Salat</p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">13,50€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>29.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Kalamares</h6>
+                        <p class="mb-0 opacity-75">
+                          Tintenfisch mit grünem Salat, Tsatsiki und<br />
+                          Pommes Frites
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">15,50€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>29a.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Schwertfisch</h6>
+                        <p class="mb-0 opacity-75">
+                          vom Grill, mit grünem Salat, und Kartoffelscheiben
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">21,00€</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFive"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFive"
+              >
+                Spezialitäten
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFive"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <p class="mb-0">
+                  Die nachstehenden Speisen werden mit Pommes Frites oder Reis
+                  und Salat serviert.
+                </p>
+                <p class="mb-4">
+                  Wenn Sie keine besonderen Wünsche äußern, wird ihr Steak
+                  MEDIUM gegrillt!
+                </p>
+                <div class="list-group">
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>34.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Gyros</h6>
+                        <p class="mb-0 opacity-75">
+                          fein geschnittenes Fleisch vom Drehspieß
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">13,00€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>35.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Gyros</h6>
+                        <p class="mb-0 opacity-75">mit Tsatsiki</p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">13,50€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>36.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Souvlakia</h6>
+                        <p class="mb-0 opacity-75">2 Fleischspieße</p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">14,00€</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSix"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSix"
+              >
+                Beilagen
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSix"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <div class="list-group">
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div></div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <h6 class="mb-0">Pommes Frites</h6>
+                      <small class="opacity-50 text-nowrap">2,50€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div></div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <h6 class="mb-0">Reis</h6>
+                      <small class="opacity-50 text-nowrap">2,50€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div></div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <h6 class="mb-0">Griechische Nudeln</h6>
+                      <small class="opacity-50 text-nowrap">3,00€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div></div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <h6 class="mb-0">grüne Bohnen</h6>
+                      <small class="opacity-50 text-nowrap">3,00€</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSeven"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSeven"
+              >
+                Für unsere kleinen Gäste
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSeven"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <div class="list-group">
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>77.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Pinokio – Teller</h6>
+                        <p class="mb-0 opacity-75">
+                          Hackfleischröllchen mit Pommes Frites und Salat
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">9,00€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>78.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Souvlaki</h6>
+                        <p class="mb-0 opacity-75">
+                          1 Fleischspieß mit Pommes Frites und Salat
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">9,00€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>79.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Gyros</h6>
+                        <p class="mb-0 opacity-75">
+                          mit Pommes Frites und Salat
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">9,00€</small>
+                    </div>
+                  </div>
+                  <div class="list-group-item d-flex gap-3 py-3">
+                    <div>80.</div>
+                    <div
+                      class="d-flex gap-2 w-100 justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h6 class="mb-0">Schweineschnitzel</h6>
+                        <p class="mb-0 opacity-75">
+                          mit Pommes Frites und Salat
+                        </p>
+                      </div>
+                      <small class="opacity-50 text-nowrap">9,00€</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  </body>
+</html>
